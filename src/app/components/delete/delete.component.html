@@ -1,0 +1,28 @@
+<h3 class="mt-2">Borrar registro</h3>
+<table class="table table-bordered mt-4">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Estadio</th>
+      <th>Sitio web</th>
+      <th>Nacionalidad</th>
+      <th>Fundacion</th>
+      <th>Entrenador</th>
+      <th>Capacidad</th>
+      <th>Valor</th>            
+    </tr>
+    <tr *ngFor="let team of allTeams">
+        <td>{{team.id}}</td>
+        <td>{{team.nombre}}</td>
+        <td>{{team.estadio}}</td>
+        <td>{{team.sitioWeb}}</td>
+        <td>{{team.nacionalidad}}</td>
+        <td>{{team.fundacion}}</td>
+        <td>{{team.entrenador}}</td>
+        <td>{{team.capacidad}}</td>
+        <td>{{team.valor}}</td>
+        <td>
+            <button (click)="delete(team.id)" class="btn btn-dark">Eliminar</button>
+        </td>
+    </tr>
+</table>

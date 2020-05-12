@@ -1,0 +1,56 @@
+<h3 class="mt-2">Lista de Equipos</h3>
+<table class="table table-bordered mt-4">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Estadio</th>
+      <th>Sitio web</th>
+      <th>Nacionalidad</th>
+      <th>Fundacion</th>
+      <th>Entrenador</th>
+      <th>Capacidad</th>
+      <th>Valor</th>            
+    </tr>
+    <tr *ngFor="let team of allTeams">
+        <td>{{team.id}}</td>
+        <td>{{team.nombre}}</td>
+        <td>{{team.estadio}}</td>
+        <td>{{team.sitioWeb}}</td>
+        <td>{{team.nacionalidad}}</td>
+        <td>{{team.fundacion}}</td>
+        <td>{{team.entrenador}}</td>
+        <td>{{team.capacidad}}</td>
+        <td>{{team.valor}}</td>
+    </tr>
+</table>
+
+<h3 class="mt-2">Buscar por ID </h3>
+<form #f = "ngForm" class="form-group">
+    <input type="text" [(ngModel)]="selectedTeam.id" name="id" placeholder="Ingrese ID" class="form-control mt-4">
+    <br>
+    <input type="button" (click)="getById(selectedTeam.id)" value="Buscar">
+</form>
+<table class="table table-bordered mt-4" >
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Estadio</th>
+        <th>Sitio web</th>
+        <th>Nacionalidad</th>
+        <th>Fundacion</th>
+        <th>Entrenador</th>
+        <th>Capacidad</th>
+        <th>Valor</th>            
+    </tr>
+    <tr>
+        <td>{{team.id}}</td>
+        <td>{{team.nombre}}</td>
+        <td>{{team.estadio}}</td>
+        <td>{{team.sitioWeb}}</td>
+        <td>{{team.nacionalidad}}</td>
+        <td>{{team.fundacion}}</td>
+        <td>{{team.entrenador}}</td>
+        <td>{{team.capacidad}}</td>
+        <td>{{team.valor}}</td>
+    </tr>
+</table>
